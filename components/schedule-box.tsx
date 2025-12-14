@@ -3,6 +3,8 @@ import React, { useRef } from 'react';
 import AnimatedScrable from './scrable';
 import { cn } from '@/lib/utils';
 import { motion, useInView } from 'framer-motion';
+import { CoatHanger } from "phosphor-react";
+
 
 type Vars = {
   [x: number]: string;
@@ -15,15 +17,21 @@ const variants: Vars = {
   5: 'xl:row-start-5 xl:col-start-1',
 };
 
+
 type ScheduleBoxT = {
   title: string;
   time: string;
+  dresscode: string;
+  location: string;
   variant: number;
   children: React.ReactNode;
 };
+
 export default function ScheduleBox({
   title,
   time,
+  dresscode,
+  location,
   variant,
   children,
 }: ScheduleBoxT) {
@@ -45,8 +53,18 @@ export default function ScheduleBox({
         {title}
       </h4>
       <span className="mb-4 block text-sm font-bold text-gold">{time}</span>
+      {location && (
+        <span className="mb-1 block text-xs font-light text-muted-foreground">
+            📍 {location}
+        </span>
+      )}
+      {dresscode && (
+        <span className="mb-1 flex items-center gap-2 text-xs font-light text-gray-400">
+          <CoatHanger size={13} weight="bold"/>{dresscode}
+        </span>
+      )}
       <p>{children}</p>
-      {variant < 3 ? <AnimatedScrable variant={variant} /> : null}
+      {variant < 5 ? <AnimatedScrable variant={variant} /> : null}
     </motion.div>
   );
 }

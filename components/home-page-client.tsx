@@ -123,21 +123,25 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
 
         {/* Container for flower + heading */}
         <div className="relative w-max mx-auto mb-10">
-          <AnimatedFlower className="absolute -top-20 left-1/2 -translate-x-1/2 rotate-180 w-20 h-20" />
-          <Heading>Wedding Weekend Schedule</Heading>
+          <AnimatedFlower className="absolute -top-20 left-1/2 -translate-x-1/6 rotate-180 w-20 h-20" />
+          <Heading>Wedding Schedule</Heading>
         </div>
         <div className="ml-6 mt-20 grid place-items-center gap-12 xl:ml-auto xl:gap-40">
           <ScheduleBox
             title="Engagement Ceremony"
-            time="Morning, time to be confirmed"
+            time="Saturday January 3rd, morning at 10:30 AM"
+            dresscode="Ethnic wear"
+            location="Tarang Farm House Kozhikode, Kerala – 673328"
             variant={1}
           >
-            Join us for the engagement ceremony on the morning of 3rd January. Details will be updated soon.
+            Join us for the engagement ceremony on the morning of 3rd January.
           </ScheduleBox>
 
           <ScheduleBox
             title="Haldi Ceremony"
-            time="Evening, time to be confirmed"
+            time="Saturday January 3rd, evening at 5:00 PM"
+            dresscode="Shades of yellow / orange"
+            location="Tarang Farm House Kozhikode, Kerala – 673328"
             variant={2}
           >
             Celebrate the vibrant Haldi ceremony with us on the evening of 3rd January.
@@ -145,10 +149,32 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
 
           <ScheduleBox
             title="Wedding Ceremony"
-            time="Morning, time to be confirmed"
+            time="Sunday January 4th, morning at 10:30 AM"
+            dresscode="Traditional white / pastel saree or kurta"
+            location="Tarang Farm House Kozhikode, Kerala – 673328"
             variant={3}
           >
-            The wedding ceremony will be held on the morning of 4th January. We look forward to sharing this special moment with you.
+            We would be delighted to have you join us as we begin this new chapter together surrounded by family and friends.
+          </ScheduleBox>
+
+          <ScheduleBox
+            title="Kozhikode Reception"
+            dresscode="Suit up"
+            time="Sunday January 4th, evening at 05:30 PM"
+            location="S.K. Pottekkat Hall, Kozhikode, Kerala – 673004"
+            variant={4}
+          >
+            Join us for a warm reception and an evening of joyful celebration with family and friends.
+          </ScheduleBox>
+
+          <ScheduleBox
+            title="Nagpur Reception"
+            time="Friday January 9th, evening at 07:00 PM"
+            dresscode="Suit up"
+            location="Tuli Imeprial, Nagpur, Maharashtra – 440010"
+            variant={5}
+          >
+            Celebrate with us for an evening of joyful moments shared with family and friends.
           </ScheduleBox>
         </div>
         {/* <div className="relative mt-28 flex items-center justify-center gap-8 py-8 text-center before:absolute before:h-full before:w-32 before:border-y-4 before:border-gold lg:text-left">
