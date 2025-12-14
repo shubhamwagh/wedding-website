@@ -78,7 +78,7 @@ export function RSVPForm() {
         description: "There was a problem submitting your RSVP. Please try again.",
         action: (
           <Button variant="outline" size="sm" asChild>
-            <Link href="mailto:atkinsmatt10@gmail.com?subject=RSVP%20Form%20Error&body=Hi,%20I%20encountered%20an%20error%20while%20submitting%20the%20RSVP%20form.%20Please%20help.">Contact Us</Link> 
+            <Link href="mailto:shubhamwagh48@gmail.com?subject=RSVP%20Form%20Error&body=Hi,%20I%20encountered%20an%20error%20while%20submitting%20the%20RSVP%20form.%20Please%20help.">Contact Us</Link> 
           </Button>
         ),
       });

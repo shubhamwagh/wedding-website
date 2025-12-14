@@ -46,7 +46,7 @@ export default function ScheduleBox({
       </h4>
       <span className="mb-4 block text-sm font-bold text-gold">{time}</span>
       <p>{children}</p>
-      {variant < 5 ? <AnimatedScrable variant={variant} /> : null}
+      {variant < 3 ? <AnimatedScrable variant={variant} /> : null}
     </motion.div>
   );
 }
