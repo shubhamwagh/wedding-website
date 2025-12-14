@@ -44,7 +44,7 @@ export default function Hero() {
             meow.className,
           )}
         >
-          Silpa & Shubham
+          Shilpa & Shubham
         </h1>
         <Countdown />
       </div>

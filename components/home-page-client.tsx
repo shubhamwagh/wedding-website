@@ -73,7 +73,7 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
             </div>
           )}
           <SaveToCalendar
-            title="Silpa & Shubam's Wedding"
+            title="Shilpa & Shubam's Wedding"
             description="Join us at Tarang Farm House"
             location="Kadalundy Road, near Mannur Toddy Shop, Kozhikode, Kerala – 673328"
             start="January 4, 2026 11:30"
@@ -97,67 +97,61 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
         <div className="mx-auto max-w-3xl px-5 text-center">
           <Heading>How it all began</Heading>
           <p className="mb-4 text-xl xl:text-3xl">
-            Nicole Gasser and Matt Atkins first crossed paths in 2016 at
-            McGillians in Philadelphia during Nicole's sister's birthday party.
-            Matt was immediately taken with Nicole's charm. They exchanged
-            pleasantries and parted ways that night. However, the following
-            week, Matt asked Nicole out to lunch near her school in Northeast
-            PA.
+            It all began with a message - simple, sincere, and full of possibility. 
+            But from the very first conversation, something felt... different. Easy. Natural.
+          </p>
+          <p className="mb-4 text-xl xl:text-3xl">  
+            Their first date was a casual coffee meetup in Oxford. What was meant to be a quick catch-up turned into hours of conversation. 
+            They talked and laughed until it was almost 10 PM. 
+            Wanting to keep the evening going, Shubham said, “Should we grab dinner? There’s a place called Dosa Park near the station.”
+            Shilpa smiled and said she’d already eaten. 
+            What she didn’t say then but admitted later was that she’d read the reviews and didn’t think the place would be any good. 
+            As it turns out, Dosa Park became one of their favorite spots. And yes, Shubham still teases her about it.
           </p>
           <p className="text-xl xl:text-3xl">
-            They immediately clicked, leading Nicole to visit Colorado for a
-            weekend adventure hosted by Matt. Eventually, Matt moved into a
-            four-floor walk-up in Philly, a place that continues to hold a
-            special place in their hearts.
+            Since that day, their story has been filled with long walks, shared meals, late-night calls, and lots of laughter. 
+            They come from different worlds - Maharashtra and Kerala - but somehow, everything just clicked.
+            Now, Shubham and Shilpa are getting ready to begin the next chapter of their journey together, surrounded by the people who mean the most to them.
           </p>
         </div>
         <Carousel />
       </section>
       <section id="schedule" className="relative px-5 py-12">
-        <AnimatedFlower className="absolute -top-28 left-1/2 mx-auto mb-6 mt-20 -translate-x-96 rotate-180" />
+        {/* Background glows */}
         <div className="absolute right-0 top-0 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
         <div className="absolute left-0 top-1/2 -z-10 h-48 w-48 -translate-y-1/2 rounded-full bg-gold blur-[80px]" />
-        <Heading>The Wedding Day</Heading>
+
+        {/* Container for flower + heading */}
+        <div className="relative w-max mx-auto mb-10">
+          <AnimatedFlower className="absolute -top-20 left-1/2 -translate-x-1/2 rotate-180 w-20 h-20" />
+          <Heading>Wedding Weekend Schedule</Heading>
+        </div>
         <div className="ml-6 mt-20 grid place-items-center gap-12 xl:ml-auto xl:gap-40">
           <ScheduleBox
-            title="Welcome to Lilah"
-            time="Arrive by 5:30 pm"
+            title="Engagement Ceremony"
+            time="Morning, time to be confirmed"
             variant={1}
           >
-            Entry to Lilah begins at 5 pm. Street parking is available in
-            Fishtown if you can find it. There will also be a shuttle bus from
-            the hotel.
+            Join us for the engagement ceremony on the morning of 3rd January. Details will be updated soon.
           </ScheduleBox>
+
           <ScheduleBox
-            title="The Ceremony"
-            time="6:00 pm - 6:30 pm"
+            title="Haldi Ceremony"
+            time="Evening, time to be confirmed"
             variant={2}
           >
-            Make your way over to the ceremony at Lilah for the I Do's part of
-            the night.
+            Celebrate the vibrant Haldi ceremony with us on the evening of 3rd January.
           </ScheduleBox>
+
           <ScheduleBox
-            title="Coctail Hour"
-            time="6:00 pm - 6:30 pm"
+            title="Wedding Ceremony"
+            time="Morning, time to be confirmed"
             variant={3}
           >
-            After the ceremony, head to the bar area for cocktail hour. Both
-            alcoholic and non-alcoholic drinks will be served, along with a
-            passed appetizers. Enjoy a drink and catch up with friends and
-            family.
-          </ScheduleBox>
-          <ScheduleBox title="Reception" time="6:00 pm - 6:30 pm" variant={4}>
-            Join us for the main event! Head through the large doors to our
-            reception, where we'll continue celebrating with dinner, drinks, and
-            dancing. We're excited to party with everyone!
-          </ScheduleBox>
-          <ScheduleBox title="After Party" time="6:00 - 6:30 pm" variant={5}>
-            After the reception, we'll be heading out in Fishtown for a low-key,
-            nothing fancy after party featuring a cash bar. Let's keep the party
-            going!
+            The wedding ceremony will be held on the morning of 4th January. We look forward to sharing this special moment with you.
           </ScheduleBox>
         </div>
-        <div className="relative mt-28 flex items-center justify-center gap-8 py-8 text-center before:absolute before:h-full before:w-32 before:border-y-4 before:border-gold lg:text-left">
+        {/* <div className="relative mt-28 flex items-center justify-center gap-8 py-8 text-center before:absolute before:h-full before:w-32 before:border-y-4 before:border-gold lg:text-left">
           <Image
             src="/museum.svg"
             width={248}
@@ -183,9 +177,9 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
               start="May 31, 2024 18:00"
             />
           </div>
-        </div>
+        </div> */}
       </section>
-      <Divider />
+      {/* <Divider />
       <section id="stay" className="relative px-5 py-16">
         <AnimatedFlower className="absolute -top-28 right-12 mx-auto mb-6 mt-20 rotate-180" />
         <div className="absolute left-1/2 top-0 -z-10 h-56 w-56 -translate-x-1/2 rounded-full bg-gold blur-[100px]" />
@@ -231,12 +225,12 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
           className="-bottom-8 left-0 xl:absolute"
         />
       </section>
-      <Divider />
-      <section id="faq" className="relative px-5 py-12">
+      <Divider /> */}
+      {/* <section id="faq" className="relative px-5 py-12">
         <div className="absolute left-0 top-40 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
         <Heading>Frequently Asked Questions</Heading>
         <FAQ />
-      </section>
+      </section> */}
       {/* <section
         id="registry"
         className="flex flex-col items-center justify-center px-5 py-12"
@@ -256,14 +250,14 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
           </a>
         </Button>
       </section> */}
-      <Divider />
+      {/* <Divider />
       <section id="rsvp" className="relative px-5 pb-32">
         <AnimatedFlower className="absolute -top-28 left-10 mx-auto mb-6 mt-20 lg:left-1/2 lg:-translate-x-96" />
         <div className="absolute bottom-0 right-0 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
         <h3 className="text-center text-xl font-bold text-gold">RSVP</h3>
         <Heading>You're Invited!</Heading>
         <RSVPForm />
-      </section>
+      </section> */}
     </div>
   );
 } 
