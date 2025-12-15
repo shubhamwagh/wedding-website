@@ -105,7 +105,7 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
             Though they come from different worlds - Maharashtra and Kerala, their hearts have found a rhythm that encourages them to grow, laugh, and shine, each becoming a better version of themselves together. 
           </p>
           <p className="text-xl xl:text-3xl">
-            Now, they are ready to begin the next chapter of their story, surrounded by the people who mean the most to them, celebrating a love that feels effortless, inspiring, and endlessly true.
+            Now, Shilpa and Shubham are ready to begin the next chapter of their story, surrounded by the people who mean the most to them, celebrating a love that feels effortless, inspiring, and endlessly true.
           </p>
         </div>
         <Carousel />
