@@ -18,7 +18,7 @@ export async function GET() {
           backgroundImage: 'url(https://nicolematt.com/main-hero.png)'
         }}
       >
-       💍 Silpa & Shubham's Wedding
+       💍 Shilpa & Shubham's Wedding
       </div>
     ),
     {

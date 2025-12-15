@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^1.3.16",
+    "@ai-sdk/openai": "^2.0.86",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -23,7 +23,9 @@
     "@vercel/og": "^0.6.2",
     "@vercel/speed-insights": "^1.2.0",
     "ai": "^5.0.113",
+    "baseline-browser-mapping": "^2.9.7",
     "calendar-link": "^2.6.0",
+    "caniuse-lite": "^1.0.30001760",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
@@ -42,7 +44,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/node": "^20.12.4",
+    "@types/node": "^24.10.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "autoprefixer": "^10.4.19",

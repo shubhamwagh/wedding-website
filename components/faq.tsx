@@ -31,48 +31,38 @@ export default function FAQ() {
 
 const data = [
   {
+    q: `What time should I arrive?`,
+    a: `Please arrive by 3rd Jan 10am for the ceremony`,
+  },
+  {
     q: `What is the dress code?`,
-    a: `The dress code is cocktail attire.`,
+    a: (
+      <>
+        Anything that makes you feel fabulous! But dress to impress :D
+        <ul className="list-disc pl-5 mt-2">
+          <li>Engagement: Ethnic Wear</li>
+          <li>Haldi: Shades of Yellow / Orange Ethnics</li>
+          <li>Wedding: Traditional White / Pastel</li>
+          <li>Reception: Western wear, just glam it up!</li>
+        </ul>
+      </>
+    ),
   },
   {
-    q: `Is parking available at the wedding venue?`,
-    a: `Limited street parking is available. However, we recommend using
-        the shuttle from the hotel or a rideshare service. Uber is widely
-        available in the area.`,
-  },
-  {
-    q: `Will there be a shuttle service to and from the event?`,
-    a: `Yes, a shuttle will run between the Hilton Penn's Landing, the
-        Kimpton Monaco in Old City, and the venue, returning at the end of
-        the night.`,
+    q: `What kind of shoes should/shouldn't I wear?`,
+    a: `Only those that let you fully enjoy the celebrations!`,
   },
   {
     q: `Will the wedding be held indoors or outdoors?`,
-    a: `The ceremony, cocktail hour, and reception will all take place
-        indoors at Lilah.`,
+    a: `The engagement, haldi and wedding ceremony will all take place
+        indoors at Tarang Farm House.`,
   },
   {
-    q: `Is Lilah accessible for wheelchairs?`,
-    a: `Yes, it is fully accessible.`,
-  },
-  {
-    q: `Tell me more about the After Party?`,
-    a: `The After Party is optional for guests wanting to keep the party
-        going. We plan to find a bar in Fishtown that will take us in.
-        Please note, it will be a cash bar, and no shuttle service will be
-        provided back to the hotel. Guests should prepared to ride share
-        back to their accommodations.`,
+    q: `Is parking available at the wedding venue?`,
+    a: `Limited street parking is available.`,
   },
   {
     q: `When should I RSVP by?`,
-    a: `Please RSVP by May 1st 2024`,
-  },
-  {
-    q: `Can I take photos?`,
-    a: `We have an amazing photographer who will cover the event, allowing
-        you to fully enjoy the occasion. We'll share the photos with
-        everyone afterwards! If you choose to take pictures, please avoid
-        doing so where our photographer is working, and refrain from using
-        flash. Thank you!`,
+    a: `Please RSVP by December 31st 2025`,
   },
 ];

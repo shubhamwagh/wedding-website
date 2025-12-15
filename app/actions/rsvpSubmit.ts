@@ -11,12 +11,12 @@ export async function submitRsvp(params: z.infer<typeof FormSchema>) {
     if (value !== undefined && value !== null) {
       data.append(key, String(value));
     } else if (key === 'recommended_song' || key === 'comments') {
-        // Explicitly append empty string for optional text fields if needed by the endpoint
-        data.append(key, ''); 
+      // Explicitly append empty string for optional text fields if needed by the endpoint
+      data.append(key, '');
     }
   });
 
-  const APP_URL = `https://script.google.com/macros/s/AKfycbxw07nrSL8AmTbgU-u-AWtrardWTUqq4g2hrw8lIgiQW1lDG7lHOzNBeTAiKPhXTmzJ/exec`;
+  const APP_URL = `https://script.google.com/macros/s/AKfycbyF4utriFX43jFiDGZkY2JrZGXBMepGKWQ9L5PPYdl_Kxgv_XdEyFtyNSsMiHyNrZ_r/exec`;
 
   try {
     const request = await fetch(APP_URL, {
@@ -40,13 +40,13 @@ export async function submitRsvp(params: z.infer<typeof FormSchema>) {
     // Try parsing the JSON response
     let resp;
     try {
-       resp = await request.json();
-       console.log({ resp });
-       return { success: true, data: resp };
+      resp = await request.json();
+      console.log({ resp });
+      return { success: true, data: resp };
     } catch (jsonError) {
-        console.error('Failed to parse success response as JSON:', jsonError);
-        // Decide how to handle non-JSON success response, maybe return success without data?
-        return { success: true, data: 'Submission successful, but response was not JSON.' }; 
+      console.error('Failed to parse success response as JSON:', jsonError);
+      // Decide how to handle non-JSON success response, maybe return success without data?
+      return { success: true, data: 'Submission successful, but response was not JSON.' };
     }
 
   } catch (error) {

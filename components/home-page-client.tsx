@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import FAQ from '@/components/faq';
 import Heading from '@/components/heading';
 import Carousel from '@/components/carousel';
@@ -9,7 +8,6 @@ import { RSVPForm } from '@/components/rsvp';
 import Divider from '@/components/divider';
 import AnimatedFlower from '@/components/flower';
 import Hero from '@/components/hero';
-import StayLink from '@/components/stay-link';
 import ScheduleBox from '@/components/schedule-box';
 import { config } from '@/config';
 import SaveToCalendar from '@/components/save-to-calendar';
@@ -111,7 +109,7 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
           <p className="text-xl xl:text-3xl">
             Since that day, their story has been filled with long walks, shared meals, late-night calls, and lots of laughter. 
             They come from different worlds - Maharashtra and Kerala - but somehow, everything just clicked.
-            Now, Shubham and Shilpa are getting ready to begin the next chapter of their journey together, surrounded by the people who mean the most to them.
+            Now, Shilpa and Shubham are getting ready to begin the next chapter of their journey together, surrounded by the people who mean the most to them.
           </p>
         </div>
         <Carousel />
@@ -250,40 +248,21 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
           alt=""
           className="-bottom-8 left-0 xl:absolute"
         />
-      </section>
-      <Divider /> */}
-      {/* <section id="faq" className="relative px-5 py-12">
+      </section> */}
+      <Divider /> 
+      <section id="faq" className="relative px-5 py-12">
         <div className="absolute left-0 top-40 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
         <Heading>Frequently Asked Questions</Heading>
         <FAQ />
-      </section> */}
-      {/* <section
-        id="registry"
-        className="flex flex-col items-center justify-center px-5 py-12"
-      >
-        <Heading>Our Registry</Heading>
-        <p className="mb-6 max-w-md text-center">
-          You know what they say — your presence is a gift! However, if you want
-          to give us a present, we're registered at Zola.
-        </p>
-        <Button variant="default" asChild>
-          <a
-            href={config.links.registry}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Give a Gift
-          </a>
-        </Button>
-      </section> */}
-      {/* <Divider />
+      </section> 
+      <Divider />
       <section id="rsvp" className="relative px-5 pb-32">
         <AnimatedFlower className="absolute -top-28 left-10 mx-auto mb-6 mt-20 lg:left-1/2 lg:-translate-x-96" />
         <div className="absolute bottom-0 right-0 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
         <h3 className="text-center text-xl font-bold text-gold">RSVP</h3>
         <Heading>You're Invited!</Heading>
         <RSVPForm />
-      </section> */}
+      </section> 
     </div>
   );
 } 

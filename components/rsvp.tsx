@@ -85,69 +85,70 @@ export function RSVPForm() {
     }
   };
 
-  const handleSuggestComment = async () => {
-    setIsSuggesting(true);
-    setSuggestion('');
-    const attendanceStatus = form.getValues('will_attend_wedding');
-    const fullName = form.getValues('fullname') || '';
-    const existingComment = form.getValues('comments') || '';
-    const recommendedSongLabel = form.getValues('recommended_song_label') || '';
+const handleSuggestComment = async () => {
+  setIsSuggesting(true);
+  setSuggestion('');
 
-    if (!fullName.trim()) {
-      toast({
-        variant: 'destructive',
-        title: 'Missing Name',
-        description: 'Please enter your name before getting a suggestion.',
-      });
-      setIsSuggesting(false);
-      return;
+  const attendanceStatus = form.getValues('will_attend_wedding');
+  const fullName = form.getValues('fullname') || '';
+  const existingComment = form.getValues('comments') || '';
+  const recommendedSongLabel =
+    form.getValues('recommended_song_label') || '';
+
+  if (!fullName.trim()) {
+    toast({
+      variant: 'destructive',
+      title: 'Missing Name',
+      description: 'Please enter your name before getting a suggestion.',
+    });
+    setIsSuggesting(false);
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/suggest-comment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        isAttending: attendanceStatus,
+        fullname: fullName,
+        existingComment,
+        recommendedSongLabel,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch suggestion: ${response.status}`);
     }
 
-    try {
-      const response = await fetch('/api/suggest-comment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          isAttending: attendanceStatus,
-          fullname: fullName,
-          existingComment: existingComment,
-          recommendedSongLabel: recommendedSongLabel,
-        }),
-      });
+    const data = await response.json();
+    const fullText: string = data.suggestion || '';
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch suggestion');
+    let index = 0;
+    const typingSpeedMs = 20;
+
+    const intervalId = setInterval(() => {
+      index += 1;
+      setSuggestion(fullText.slice(0, index));
+
+      if (index >= fullText.length) {
+        clearInterval(intervalId);
       }
+    }, typingSpeedMs);
 
-      if (!response.body) {
-          throw new Error('Response body is null');
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let streamedText = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const chunk = decoder.decode(value, { stream: true });
-        streamedText += chunk;
-        setSuggestion(streamedText);
-      }
-
-    } catch (error) {
-      console.error('Error fetching suggestion:', error);
-      toast({
-        variant: 'destructive',
-        title: 'Suggestion Failed',
-        description: 'Could not generate a comment suggestion.',
-      });
-    } finally {
-      setIsSuggesting(false);
-    }
-  };
+  } catch (error) {
+    console.error('Error fetching suggestion:', error);
+    toast({
+      variant: 'destructive',
+      title: 'Suggestion Failed',
+      description: 'Could not generate a comment suggestion.',
+    });
+  } finally {
+    setIsSuggesting(false);
+  }
+};
 
   const handleAcceptSuggestion = () => {
     const currentComment = form.getValues('comments') || '';
@@ -203,12 +204,12 @@ export function RSVPForm() {
           name="will_attend_wedding"
           render={({ field }) => (
             <FormItem className="flex w-full max-w-xs flex-wrap items-center justify-between">
-              <FormLabel>Will we see you there?</FormLabel>
+              <FormLabel>Will we see you there ?</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="flex items-center"
+                  className="flex item-center"
                   disabled={isLoading}
                 >
                   <FormItem className="flex items-center space-x-3 space-y-0 [&+label]:[&_input:checked]:bg-light-gray">
@@ -238,7 +239,7 @@ export function RSVPForm() {
           name="will_attend_fnight"
           render={({ field }) => (
             <FormItem className="flex w-full max-w-xs flex-wrap items-center justify-between">
-              <FormLabel>Will you attend Friday Night?</FormLabel>
+              <FormLabel>Will you join us on 9th Jan?</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -326,10 +327,12 @@ export function RSVPForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isLoading}>
-          {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-          Submit your RSVP
-        </Button>
+        <div className="flex justify-center">
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
+            Submit your RSVP
+          </Button>
+        </div>
       </form>
     </Form>
   );

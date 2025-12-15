@@ -8,15 +8,15 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://silpashubham.com'),
-  title: 'Silpa & Shubham Wedding',
+  metadataBase: new URL('https://shilpashubham.com'),
+  title: 'Shilpa & Shubham Wedding',
   description: 'Please RSVP to our wedding!',
   openGraph: {
-    images: 'https://silpashubham.com/og-bg.png',
-    title: 'Silpa & Shubham Wedding Website',
+    images: 'https://shilpashubham.com/og-bg.png',
+    title: 'Shilpa & Shubham Wedding Website',
     description: 'Please RSVP to our wedding!',
-    url: 'https://silpashubham.com',
-    siteName: 'Silpa & Shubham Wedding',
+    url: 'https://shilpashubham.com',
+    siteName: 'Shilpa & Shubham Wedding',
     locale: 'en_IN',
     type: 'website',
   },
