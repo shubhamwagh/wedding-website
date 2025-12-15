@@ -55,7 +55,7 @@ const data = [
   {
     q: `Will the wedding be held indoors or outdoors?`,
     a: `The engagement, haldi and wedding ceremony will all take place
-        indoors at Tarang Farm House.`,
+        outdoors at Tarang Farm House.`,
   },
   {
     q: `Is parking available at the wedding venue?`,
