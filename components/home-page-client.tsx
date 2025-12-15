@@ -95,21 +95,17 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
         <div className="mx-auto max-w-3xl px-5 text-center">
           <Heading>How it all began</Heading>
           <p className="mb-4 text-xl xl:text-3xl">
-            It all began with a message - simple, sincere, and full of possibility. 
-            But from the very first conversation, something felt... different. Easy. Natural.
+            It all began with a simple message - sincere, unassuming, and full of promise. From the very first conversation, it felt effortless. 
+            With each laugh and each shared story, they discovered that together, they could truly be themselves and, in doing so, bring out the best in each other.
           </p>
           <p className="mb-4 text-xl xl:text-3xl">  
-            Their first date was a casual coffee meetup in Oxford. What was meant to be a quick catch-up turned into hours of conversation. 
-            They talked and laughed until it was almost 10 PM. 
-            Wanting to keep the evening going, Shubham said, “Should we grab dinner? There’s a place called Dosa Park near the station.”
-            Shilpa smiled and said she’d already eaten. 
-            What she didn’t say then but admitted later was that she’d read the reviews and didn’t think the place would be any good. 
-            As it turns out, Dosa Park became one of their favorite spots. And yes, Shubham still teases her about it.
+            Their first meeting in Oxford was meant to be a casual coffee, but time slipped away as they talked, laughed, and shared dreams. 
+            It was a moment that felt natural, easy, and full of possibility, a glimpse of what their journey together could be. 
+            Since then, their love has grown through long walks, late-night conversations, shared meals, and quiet moments that say more than words ever could. 
+            Though they come from different worlds - Maharashtra and Kerala, their hearts have found a rhythm that encourages them to grow, laugh, and shine, each becoming a better version of themselves together. 
           </p>
           <p className="text-xl xl:text-3xl">
-            Since that day, their story has been filled with long walks, shared meals, late-night calls, and lots of laughter. 
-            They come from different worlds - Maharashtra and Kerala - but somehow, everything just clicked.
-            Now, Shilpa and Shubham are getting ready to begin the next chapter of their journey together, surrounded by the people who mean the most to them.
+            Now, they are ready to begin the next chapter of their story, surrounded by the people who mean the most to them, celebrating a love that feels effortless, inspiring, and endlessly true.
           </p>
         </div>
         <Carousel />
@@ -175,80 +171,8 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
             Celebrate with us for an evening of joyful moments shared with family and friends.
           </ScheduleBox>
         </div>
-        {/* <div className="relative mt-28 flex items-center justify-center gap-8 py-8 text-center before:absolute before:h-full before:w-32 before:border-y-4 before:border-gold lg:text-left">
-          <Image
-            src="/museum.svg"
-            width={248}
-            height={392}
-            alt=""
-            className="hidden xl:block"
-          />
-          <div className="max-w-sm">
-            <h4 className="text-xl font-bold">After Party</h4>
-            <span className="mb-4 block text-sm font-bold text-gold">
-              Friday May 31st, at 6:00 pm
-            </span>
-            <p className="mb-4">
-              Please join us at Museum of the American Revolution, 101 South
-              Third Street, Philadelphia, PA
-            </p>
-            <SaveToCalendar
-              title="After Party"
-              description="Join us at Museum of the American Revolution, 101 South
-              Third Street, Philadelphia, PA"
-              location="Museum of the American Revolution, 101 South
-              Third Street, Philadelphia, PA"
-              start="May 31, 2024 18:00"
-            />
-          </div>
-        </div> */}
       </section>
-      {/* <Divider />
-      <section id="stay" className="relative px-5 py-16">
-        <AnimatedFlower className="absolute -top-28 right-12 mx-auto mb-6 mt-20 rotate-180" />
-        <div className="absolute left-1/2 top-0 -z-10 h-56 w-56 -translate-x-1/2 rounded-full bg-gold blur-[100px]" />
-        <Heading>Your Stay in Philadelphia</Heading>
-        <p className="mx-auto max-w-md text-center">
-          Turn your weekend into an adventure! Explore nearby locations and our
-          favorite spots in Philly.
-        </p>
-        <div className="mx-auto mt-20 grid max-w-7xl place-items-center gap-12">
-          <StayLink
-            title="Lodging"
-            href={config.links.lodging}
-            label="Book a Room"
-          >
-            There will be shuttles with limited seating available from the
-            Hilton Penns Landing & Kimpton Monico to the event and back.
-          </StayLink>
-          <StayLink
-            title="Eat & Drink"
-            href={config.links.eatdrink}
-            label="Open Map"
-            align="middle"
-          >
-            Wm. Mulherin's Sons, Lark, Middle Child, LMNO, Gilda, Johnny
-            Brenda's, International Bar, Martha, Two Robbers, Bok Ba
-          </StayLink>
-          <StayLink
-            title="Things To Do"
-            href={config.links.thingstodo}
-            label="Open Map"
-            align="right"
-          >
-            Philadelphia Museum of Art, Franklin Institute, Schuylkill River
-            Trail, The Barnes Foundation, Wissahickon, Eastern State
-            Penitentiary
-          </StayLink>
-        </div>
-        <Image
-          src="/city.svg"
-          width={692}
-          height={200}
-          alt=""
-          className="-bottom-8 left-0 xl:absolute"
-        />
-      </section> */}
+
       <Divider /> 
       <section id="faq" className="relative px-5 py-12">
         <div className="absolute left-0 top-40 -z-10 h-48 w-48 rounded-full bg-gold blur-[80px]" />
