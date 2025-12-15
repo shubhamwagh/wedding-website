@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Shilpa & Shubham Wedding',
   description: 'Please RSVP to our wedding!',
   icons: {
-    icon: '/favicon.ico',
+    icon: 'https://shilpashubham.com/favicon.ico',
   },
   openGraph: {
     images: 'https://shilpashubham.com/og-bg.png',
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     url: 'https://shilpashubham.com',
     siteName: 'Shilpa & Shubham Wedding',
     locale: 'en_IN',
+    alternateLocale: [
+      'mr_IN',                     
+      'ml_IN',                    
+      'hi_IN',
+    ],
     type: 'website',
   },
   robots: {
