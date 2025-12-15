@@ -1,5 +1,7 @@
 # Shilpa & Shubham's Wedding Website
 
+[![Shilpa & Shubham Wedding Website Screenshot](https://shilpashubham.com/og-bg.png)](https://shilpashubham.com)
+
 This repository contains the source code for the official wedding website of Shilpa & Shubham, built with Next.js and deployed on Vercel.
 
 **Live Site:** [https://shilpashubham.com](https://shilpashubham.com)
