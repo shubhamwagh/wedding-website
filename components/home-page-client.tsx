@@ -186,7 +186,10 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
         <h3 className="text-center text-xl font-bold text-gold">RSVP</h3>
         <Heading>You're Invited!</Heading>
         <RSVPForm />
-      </section> 
+      </section>
+      <footer className="text-center py-6 text-sm text-gray-500">
+        © 2025 Shilpa & Shubham. All rights reserved.
+      </footer> 
     </div>
   );
 } 
