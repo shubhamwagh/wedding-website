@@ -15,7 +15,7 @@ export async function GET() {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundImage: 'url(https://shilpashubham.com/og-bg.png)'
+          backgroundImage: 'url(https://shilpashubham.com/og-bg.jpeg)'
         }}
       >
        💍 Shilpa & Shubham's Wedding

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     icon: 'https://shilpashubham.com/favicon.ico',
   },
   openGraph: {
-    images: 'https://shilpashubham.com/og-bg.png',
+    images: 'https://shilpashubham.com/og-bg.jpeg',
     title: 'Shilpa & Shubham Wedding Website',
     description: 'Please RSVP to our wedding!',
     url: 'https://shilpashubham.com',
