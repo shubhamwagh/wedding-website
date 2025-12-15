@@ -15,7 +15,7 @@ export async function GET() {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundImage: 'url(https://nicolematt.com/main-hero.png)'
+          backgroundImage: 'url(https://shilpashubham.com/main-hero.png)'
         }}
       >
        💍 Shilpa & Shubham's Wedding
