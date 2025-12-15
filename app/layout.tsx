@@ -11,8 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://shilpashubham.com'),
   title: 'Shilpa & Shubham Wedding',
   description: 'Please RSVP to our wedding!',
+  icons: {
+    icon: 'favicon.ico',
+  },
   openGraph: {
-    images: 'https://shilpashubham.com/og-bg.png',
+    images: 'https://shilpashubham.com/main-hero.png',
     title: 'Shilpa & Shubham Wedding Website',
     description: 'Please RSVP to our wedding!',
     url: 'https://shilpashubham.com',
