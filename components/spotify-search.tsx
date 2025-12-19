@@ -134,7 +134,7 @@ export default function SpotifySearch({
 
   return (
     <FormItem className="flex flex-col">
-      <FormLabel>Recomend a song</FormLabel>
+      <FormLabel>Recommend a song</FormLabel>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <FormControl>
