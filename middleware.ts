@@ -15,11 +15,14 @@ export function middleware(req: NextRequest) {
 
     if (uploadUrl) {
       const html = `<html><head>
+          <meta property="og:title" content="Shilpa & Shubham Wedding - Share Your Photos" />
+          <meta property="og:description" content="Share your photos from Shilpa & Shubham Wedding on January 03, 2026. Be the first to add photos!" />
+          <meta property="og:image" content="https://shilpashubham.com/uploads.webp" />
           <meta name="robots" content="noindex, nofollow">
           <meta http-equiv="refresh" content="0;url=${uploadUrl}">
           </head><body></body></html>`;
       const res = new NextResponse(html, { status: 200 });
-      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
       res.headers.set("Content-Type", "text/html");
       return res;
     } else {
@@ -42,11 +45,14 @@ export function middleware(req: NextRequest) {
 
     if (galleryUrl) {
       const html = `<html><head>
+          <meta property="og:title" content="Shilpa & Shubham Wedding - Live slideshow" />
+          <meta property="og:description" content="Watch photos and videos from Shilpa & Shubham Wedding appear in real-time as guests upload them." />
+          <meta property="og:image" content="https://shilpashubham.com/gallery.png" />
           <meta name="robots" content="noindex, nofollow">
           <meta http-equiv="refresh" content="0;url=${galleryUrl}">
           </head><body></body></html>`;
       const res = new NextResponse(html, { status: 200 });
-      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
       res.headers.set("Content-Type", "text/html");
       return res;
     } else {
