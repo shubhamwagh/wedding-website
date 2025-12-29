@@ -14,8 +14,13 @@ export function middleware(req: NextRequest) {
     }
 
     if (uploadUrl) {
-      const res =  NextResponse.redirect(uploadUrl, 307);
-      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      const html = `<html><head>
+          <meta name="robots" content="noindex, nofollow">
+          <meta http-equiv="refresh" content="0;url=${uploadUrl}">
+          </head><body></body></html>`;
+      const res = new NextResponse(html, { status: 200 });
+      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
+      res.headers.set("Content-Type", "text/html");
       return res;
     } else {
       // fallback for local dev
@@ -36,8 +41,13 @@ export function middleware(req: NextRequest) {
     }
 
     if (galleryUrl) {
-      const res = NextResponse.redirect(galleryUrl, 307);
-      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      const html = `<html><head>
+          <meta name="robots" content="noindex, nofollow">
+          <meta http-equiv="refresh" content="0;url=${galleryUrl}">
+          </head><body></body></html>`;
+      const res = new NextResponse(html, { status: 200 });
+      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
+      res.headers.set("Content-Type", "text/html");
       return res;
     } else {
       // fallback for local dev
