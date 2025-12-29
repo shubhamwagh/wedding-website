@@ -19,7 +19,7 @@ export function middleware(req: NextRequest) {
           <meta http-equiv="refresh" content="0;url=${uploadUrl}">
           </head><body></body></html>`;
       const res = new NextResponse(html, { status: 200 });
-      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
+      res.headers.set("X-Robots-Tag", "noindex, nofollow");
       res.headers.set("Content-Type", "text/html");
       return res;
     } else {
@@ -46,7 +46,7 @@ export function middleware(req: NextRequest) {
           <meta http-equiv="refresh" content="0;url=${galleryUrl}">
           </head><body></body></html>`;
       const res = new NextResponse(html, { status: 200 });
-      res.headers.set("X-Robots-Tag", "noindex, nofollow, noimageindex");
+      res.headers.set("X-Robots-Tag", "noindex, nofollow");
       res.headers.set("Content-Type", "text/html");
       return res;
     } else {
