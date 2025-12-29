@@ -14,7 +14,9 @@ export function middleware(req: NextRequest) {
     }
 
     if (uploadUrl) {
-      return NextResponse.redirect(uploadUrl, 307);
+      const res =  NextResponse.redirect(uploadUrl, 307);
+      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      return res;
     } else {
       // fallback for local dev
       if (host.includes("localhost")) {
@@ -34,7 +36,9 @@ export function middleware(req: NextRequest) {
     }
 
     if (galleryUrl) {
-      return NextResponse.redirect(galleryUrl, 307);
+      const res = NextResponse.redirect(galleryUrl, 307);
+      res.headers.set("X-Robots-Tag", "noindex, nofollow");
+      return res;
     } else {
       // fallback for local dev
       if (host.includes("localhost")) {
