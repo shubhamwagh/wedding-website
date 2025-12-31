@@ -188,7 +188,7 @@ export default function HomePageClient({ weatherData }: HomePageClientProps) {
         <RSVPForm />
       </section>
       <footer className="text-center py-6 text-sm text-gray-500">
-        © 2025 Shilpa & Shubham. All rights reserved.
+        © 2026 Shilpa & Shubham. All rights reserved.
       </footer> 
     </div>
   );
