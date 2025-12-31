@@ -30,6 +30,7 @@ export const metadata: Metadata = {
       'mr_IN',                     
       'ml_IN',                    
       'hi_IN',
+      'en_GB',
     ],
     type: 'website',
   },
