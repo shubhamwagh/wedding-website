@@ -8,7 +8,6 @@ import { RSVPForm } from '@/components/rsvp';
 import Divider from '@/components/divider';
 import AnimatedFlower from '@/components/flower';
 import Hero from '@/components/hero';
-import StayLink from '@/components/stay-link';
 import ScheduleBox from '@/components/schedule-box';
 import { config } from '@/config';
 import SaveToCalendar from '@/components/save-to-calendar';
